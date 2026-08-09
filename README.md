@@ -1,4 +1,4 @@
-# Neural Network Foundations
+# 🚧 WIP : Neural Network Foundations
 
 A hands-on guide to understanding neural networks by implementing them
 from raw NumPy, then comparing to PyTorch.
