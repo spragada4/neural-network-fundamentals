@@ -26,7 +26,7 @@ dist/
 *.npz
 data/
 checkpoints/
-mnist_data/
+02_mlp/mnist_data/*
 
 # OS / editor junk
 .DS_Store
