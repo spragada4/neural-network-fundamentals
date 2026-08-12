@@ -15,7 +15,7 @@ not just the *how*.
       built on top of it, and a full train loop with plain gradient descent
 - [x] **02 — MLP**: matrix-based MLP in NumPy, trained on XOR and real MNIST (96.7%), plus a PyTorch comparison version — **complete**,
       softmax + cross-entropy, trained on XOR) — *in progress*
-- [ ] **03 — CNN**: convolutions, pooling, and image classification from scratch
+- [x] **03 — CNN**: convolutions, pooling, and image classification from scratch
 - [ ] **04 — RNN/LSTM**: sequence modeling from scratch
 - [ ] **05 — Transformer**: self-attention from scratch
 - [ ] PyTorch comparison versions for each architecture above
