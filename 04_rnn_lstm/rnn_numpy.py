@@ -15,6 +15,15 @@ class RNN:
         self.W_hy = rng.normal(0, 0.01, size=(vocab_size, hidden_size))
         self.b_h = np.zeros((hidden_size, 1))
         self.b_y = np.zeros((vocab_size, 1))
+        self.b_h = np.zeros((hidden_size, 1))
+        self.b_y = np.zeros((vocab_size, 1))
+
+        # Adagrad memory: running sum of squared gradients, per parameter
+        self.mW_xh = np.zeros_like(self.W_xh)
+        self.mW_hh = np.zeros_like(self.W_hh)
+        self.mW_hy = np.zeros_like(self.W_hy)
+        self.mb_h = np.zeros_like(self.b_h)
+        self.mb_y = np.zeros_like(self.b_y)
 
     def forward(self, inputs, h_prev):
         """inputs: list of one-hot column vectors (vocab_size, 1), one per time step.
