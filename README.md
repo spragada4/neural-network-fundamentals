@@ -7,15 +7,15 @@ runnable, tested against expected output, and documented with the *why*,
 not just the *how*.
 
 > 🚧 **Work in progress.** Built step by step, one architecture at a time.
-> Currently on: matrix-based MLP (NumPy).
+> Currently on: LSTM (gated RNN).
 
 ## Roadmap
 
 - [x] **01 — Foundations**: scalar autograd engine (`Value`), a `Neuron`/`Layer`/`MLP`
       built on top of it, and a full train loop with plain gradient descent
-- [x] **02 — MLP**: matrix-based MLP in NumPy, trained on XOR and real MNIST (96.7%), plus a PyTorch comparison version — **complete**,
-- [x] **03 — CNN**: convolutions, pooling, and image classification from scratch
-- [ ] **04 — RNN/LSTM**: sequence modeling from scratch
+- [x] **02 — MLP**: matrix-based MLP in NumPy, trained on XOR and real MNIST (96.7%), plus a PyTorch comparison version — **complete**
+- [x] **03 — CNN**: convolutions, pooling, and gradient-checked backprop, trained on MNIST, plus a PyTorch comparison — **complete**
+- [ ] **04 — RNN/LSTM**: char-level RNN with BPTT working (see module README for Adagrad note) — *LSTM in progress*
 - [ ] **05 — Transformer**: self-attention from scratch
 - [ ] PyTorch comparison versions for each architecture above
 
