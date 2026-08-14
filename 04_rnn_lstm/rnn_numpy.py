@@ -86,10 +86,16 @@ class RNN:
         for grad in [dW_xh, dW_hh, dW_hy, db_h, db_y]:
             np.clip(grad, -5, 5, out=grad)
 
-        self.W_xh -= lr * dW_xh
-        self.W_hh -= lr * dW_hh
-        self.W_hy -= lr * dW_hy
-        self.b_h -= lr * db_h
-        self.b_y -= lr * db_y
+        # Adagrad update: divide each gradient by sqrt(running sum of its
+        # own squared gradients) -- parameters with big/frequent gradients
+        # automatically get smaller effective steps, which stabilizes RNN training
+        eps = 1e-8
+        for param, dparam, mem in zip(
+            [self.W_xh, self.W_hh, self.W_hy, self.b_h, self.b_y],
+            [dW_xh, dW_hh, dW_hy, db_h, db_y],
+            [self.mW_xh, self.mW_hh, self.mW_hy, self.mb_h, self.mb_y],
+        ):
+            mem += dparam * dparam
+            param -= lr * dparam / (np.sqrt(mem) + eps)
 
         return loss

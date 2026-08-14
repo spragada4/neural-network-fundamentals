@@ -15,7 +15,7 @@ print(f"Text length: {len(text)} chars, vocab size: {vocab_size}")
 
 hidden_size = 64
 seq_length = 25
-learning_rate = 0.1
+learning_rate = 0.15
 
 rnn = RNN(vocab_size, hidden_size, seed=0)
 h_prev = np.zeros((hidden_size, 1))
