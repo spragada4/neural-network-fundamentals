@@ -7,7 +7,7 @@ runnable, tested against expected output, and documented with the *why*,
 not just the *how*.
 
 > 🚧 **Work in progress.** Built step by step, one architecture at a time.
-> Currently on: LSTM (gated RNN).
+> Currently on: Transformer (self-attention).
 
 ## Roadmap
 
@@ -15,7 +15,9 @@ not just the *how*.
       built on top of it, and a full train loop with plain gradient descent
 - [x] **02 — MLP**: matrix-based MLP in NumPy, trained on XOR and real MNIST (96.7%), plus a PyTorch comparison version — **complete**
 - [x] **03 — CNN**: convolutions, pooling, and gradient-checked backprop, trained on MNIST, plus a PyTorch comparison — **complete**
-- [ ] **04 — RNN/LSTM**: char-level RNN with BPTT working (see module README for Adagrad note) — *LSTM in progress*
+- [x] **04 — RNN/LSTM**: char-level RNN (unstable late-training) vs LSTM
+      (stable, 20x lower loss) — empirically demonstrates why gating
+      solves the vanishing/exploding gradient problem — **complete**
 - [ ] **05 — Transformer**: self-attention from scratch
 - [ ] PyTorch comparison versions for each architecture above
 
