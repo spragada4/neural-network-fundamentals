@@ -18,7 +18,9 @@ not just the *how*.
 - [x] **04 — RNN/LSTM**: char-level RNN (unstable late-training) vs LSTM
       (stable, 20x lower loss) — empirically demonstrates why gating
       solves the vanishing/exploding gradient problem — **complete**
-- [ ] **05 — Transformer**: self-attention from scratch
+- [x] **05 — Transformer**: self-attention (hand-verified forward pass) +
+      full encoder block trained in PyTorch — reveals the loss-vs-generation-quality
+      gap (exposure bias) on tiny datasets — **complete**
 - [ ] PyTorch comparison versions for each architecture above
 
 ## Why this exists
